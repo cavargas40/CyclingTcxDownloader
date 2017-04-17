@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { MapMyRydeService } from './services/map-my-ryde.service';
+
 import { AppComponent } from './app.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MapMyRydeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
